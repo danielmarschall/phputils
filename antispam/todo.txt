@@ -1,0 +1,14 @@
+ToDo 3.x
+
+- Nothing :-)
+
+ToDo 4.x
+
+- Pack everything in a PHP class
+- Allow to add things before and after the content of <a>...</a> (e.g. font colors)
+- Allow to add things before and after the script/noscript part (because of W3C validity)
+- Make the text links variable
+
+Future
+
+- Release phpBB 2 + 3 mods for ViaThinkSoft AntiSpam
