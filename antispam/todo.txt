@@ -8,6 +8,7 @@ ToDo 4.x
 - Allow to add things before and after the content of <a>...</a> (e.g. font colors)
 - Allow to add things before and after the script/noscript part (because of W3C validity)
 - Make the text links variable
+- Implement $css_class like in v3
 
 Future
 

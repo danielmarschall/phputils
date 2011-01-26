@@ -1,9 +1,11 @@
 <?php
 
-// PHP-AntiSpam-Funktion "secure_email", Version 3.02 of 2009-09-23
+if (!defined('SGM_ENGINE_USED')) die();
+
+// PHP-AntiSpam-Funktion "secure_email", Version 3.03 of 2011-01-26
 // von Daniel Marschall [www.daniel-marschall.de]
 
-function secure_email($email, $linktext, $crypt_linktext)
+function secure_email($email, $linktext, $crypt_linktext, $css_class = '')
 {
 	// No new lines to avoid a JavaScript error!
 	$linktext = str_replace("\r", ' ', $linktext);
@@ -37,7 +39,9 @@ function secure_email($email, $linktext, $crypt_linktext)
 	if ($email != '')
 	{
 		$aus .= '<script language="JavaScript" type="text/javascript"><!--'."\n";
-		$aus .= alas_js_write('<a href="');
+		$aus .= alas_js_write('<a ');
+		if ($css_class != '') $aus .= alas_js_write('class="'.$css_class.'" ');
+		$aus .= alas_js_write('href="');
 		$aus .= alas_js_crypt('mailto:'.$email);
 		$aus .= alas_js_write('">');
 		$aus .= $crypt_linktext ? alas_js_crypt($linktext) : alas_js_write($linktext);
